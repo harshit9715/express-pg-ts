@@ -12,7 +12,7 @@ const DB_PORT = process.env.DB_PORT
 const signer = new AWS.RDS.Signer({
     region: process.env.AWS_REGION,
     hostname: DB_HOST,
-    port: 3306,
+    port: +DB_PORT,
     username: DB_USER
 });
 
